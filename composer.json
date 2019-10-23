@@ -1,7 +1,11 @@
 {
     "name": "yason/brain-games",
+    "bin": [
+	    "bin/brain-games"
+    ],
     "description": "first project",
-    "type": "project",
+    "stability":"stable",
+    "type": "package",
     "license": "MIT",
     "minimum-stability": "dev",
     "require": {}
