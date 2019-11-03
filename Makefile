@@ -1,6 +1,5 @@
 install:
 	composer install
-	composer clearcache
 	composer require "squizlabs/php_codesniffer" --dev
 
 lint:
