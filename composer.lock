@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "861c9041c3e027f729391e7e62e7bd83",
+    "content-hash": "fa0f2be6c5695d3f4d03799868bfb297",
     "packages": [
         {
             "name": "wp-cli/php-cli-tools",
@@ -64,12 +64,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "b1c7d88b330d3fa32ba6a01a0e9794d228a7e3b0"
+                "reference": "6a4abf447866731eed5d4a944686992366840cc3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/b1c7d88b330d3fa32ba6a01a0e9794d228a7e3b0",
-                "reference": "b1c7d88b330d3fa32ba6a01a0e9794d228a7e3b0",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/6a4abf447866731eed5d4a944686992366840cc3",
+                "reference": "6a4abf447866731eed5d4a944686992366840cc3",
                 "shasum": ""
             },
             "require": {
@@ -107,14 +107,12 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2019-10-30T23:25:52+00:00"
+            "time": "2019-11-03T21:26:48+00:00"
         }
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "squizlabs/php_codesniffer": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
