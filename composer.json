@@ -15,7 +15,7 @@
 		"BrainGames\\Cli\\": "src"
 	},
 	"files": [
-	"src/cli.php"
+	"src/Cli.php"
 	]
     },
     "require-dev": {
