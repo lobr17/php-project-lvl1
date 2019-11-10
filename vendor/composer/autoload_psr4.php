@@ -6,5 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'BrainGames\\CLI\\' => array($baseDir . '/src'),
+    'BrainGames\\Cli\\' => array($baseDir . '/src'),
 );

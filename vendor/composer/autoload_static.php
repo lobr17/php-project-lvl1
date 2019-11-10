@@ -14,12 +14,12 @@ class ComposerStaticInitf3fc7c7cbc4b5794a8803ee18c84f485
     public static $prefixLengthsPsr4 = array (
         'B' => 
         array (
-            'BrainGames\\CLI\\' => 15,
+            'BrainGames\\Cli\\' => 15,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'BrainGames\\CLI\\' => 
+        'BrainGames\\Cli\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),

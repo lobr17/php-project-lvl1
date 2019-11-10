@@ -12,7 +12,7 @@
     "minimum-stability": "dev",
     "autoload": {
 	"psr-4": {
-		"BrainGames\\CLI\\": "src"
+		"BrainGames\\Cli\\": "src"
 	},
 	"files": [
 	"src/cli.php"
