@@ -13,7 +13,8 @@
 		"BrainGames\\Cli\\": "src"
 	},
 	"files": [
-	"vendor/bin/phpcs"
+	"src/Cli.php",	
+	"vendor/squizlabs/php_codesniffer/bin/phpcs"
 	]
     },
     "require-dev": {
