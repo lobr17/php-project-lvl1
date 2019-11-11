@@ -8,6 +8,9 @@
     "description": "first project",
     "license": "MIT",
     "minimum-stability": "dev",
+    "scripts": {
+    	"phpcs": "phpcs"
+    },
     "autoload": {
 	"psr-4": {
 		"BrainGames\\Cli\\": "src"
@@ -19,9 +22,6 @@
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "3.5.0"
-    },
-    "scripts": {
-	"phpcs": "phpcs"
-	 } 
+    } 
     
 }
