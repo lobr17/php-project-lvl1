@@ -9,7 +9,6 @@ class ComposerStaticInitf3fc7c7cbc4b5794a8803ee18c84f485
     public static $files = array (
         'be01b9b16925dcb22165c40b46681ac6' => __DIR__ . '/..' . '/wp-cli/php-cli-tools/lib/cli/cli.php',
         'dd684d8bdf95e84d98a8804cf20bafac' => __DIR__ . '/../..' . '/src/Cli.php',
-        'e60bcde2cf1f9c17c132209c04c8d9a8' => __DIR__ . '/..' . '/squizlabs/php_codesniffer/bin/phpcs',
     );
 
     public static $prefixLengthsPsr4 = array (
