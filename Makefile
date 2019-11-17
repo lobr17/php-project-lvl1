@@ -1,7 +1,7 @@
 install:
 	composer install
 
-setup: install
+setup:	install
 	composer require "squizlabs/php_codesniffer" --dev	
 	
 lint:
