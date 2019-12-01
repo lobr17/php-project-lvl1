@@ -20,7 +20,7 @@
 	]
     },
     "require-dev": {
-        "squizlabs/php_codesniffer": "dev-master"
+        "squizlabs/php_codesniffer": "*"
     } 
     
 }
