@@ -3,7 +3,7 @@ php:
         - '7.2'
 
 install:
-        - make update
+        - make nstall 
           
 
 script: make lint          
