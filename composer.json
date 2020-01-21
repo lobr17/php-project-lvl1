@@ -1,26 +1,18 @@
 {
     "name": "yason/brain-games",
-    "bin": ["bin/brain-games"],
+    "bin": [
+	    "bin/brain-even"
+    ],
     "require": {
     	"wp-cli/php-cli-tools": "^0.11.10"
     },
-    "type": "library",
+    "type": "package",
     "description": "first project",
     "license": "MIT",
     "minimum-stability": "dev",
-    "scripts": {
-    	"phpcs": "phpcs"
-    },
     "autoload": {
-	"psr-4": {
-		"BrainGames\\Cli\\": "src"
-	},
 	"files": [
-	"src/Cli.php"
+	"src/cli.php"
 	]
-    },
-    "require-dev": {
-        "squizlabs/php_codesniffer": "dev-master"
-    } 
-    
+    }
 }
