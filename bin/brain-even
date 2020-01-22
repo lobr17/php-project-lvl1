@@ -12,6 +12,8 @@ if (file_exists($autoloadPath1)) {
 
 
 use function BrainGames\Even\even;
+use function BrainGames\Cli\run;
 
+//run();
 even();
 
