@@ -1,5 +1,5 @@
 {
-    "name": "yason/brain-games",
+    "name": "yason/brain-even",
     "bin": [
 	    "bin/brain-even"
     ],
@@ -12,7 +12,8 @@
     "minimum-stability": "dev",
     "autoload": {
 	"files": [
-	"src/cli.php"
+	"src/Cli.php",
+	"even.php"
 	]
     }
 }
