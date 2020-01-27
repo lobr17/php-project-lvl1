@@ -7,6 +7,6 @@
 [![Build Status](https://travis-ci.org/lobr17/php-project-lvl1.svg?branch=master)](https://travis-ci.org/lobr17/php-project-lvl1)
 
 
-Setting/
+# Setting
 
 https://asciinema.org/a/Inb0sshZqZzXXJeNU1AqPwksz
