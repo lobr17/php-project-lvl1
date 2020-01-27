@@ -12,7 +12,6 @@
     "minimum-stability": "dev",
     "autoload": {
 	"files": [
-	"src/Cli.php",
 	"even.php"
 	]
     }
