@@ -1,7 +1,8 @@
 {
     "name": "yason/brain-even",
     "bin": [
-	    "bin/brain-even"
+	    "bin/brain-even",
+	    "bin/brain-calc"
     ],
     "require": {
     	"wp-cli/php-cli-tools": "^0.11.10"
@@ -12,7 +13,8 @@
     "minimum-stability": "dev",
     "autoload": {
 	"files": [
-	"even.php"
+	"games/even.php",
+	"games/calc.php"
 	]
     }
 }

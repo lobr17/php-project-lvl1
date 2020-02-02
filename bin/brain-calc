@@ -9,11 +9,6 @@ if (file_exists($autoloadPath1)) {
     require_once $autoloadPath2;
 }
 
-use function BrainGames\Even\even;
+use function BrainGames\Calc\calc;
 
-even();
-
-//use function BrainGames\Cli\run;
-
-//run();
-
+calc();
