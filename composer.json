@@ -1,5 +1,5 @@
 {
-    "name": "yason/brain-even",
+    "name": "yason/brain-games",
     "bin": [
 	    "bin/brain-even",
 	    "bin/brain-calc"
