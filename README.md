@@ -9,4 +9,9 @@
 
 # Setting
 
+brain-even
 https://asciinema.org/a/Inb0sshZqZzXXJeNU1AqPwksz
+
+
+brain-games: brain-even and brain-calc
+https://asciinema.org/a/pa5WTL1mrMUrLJDvswYb9E0uP
