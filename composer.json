@@ -3,7 +3,8 @@
     "bin": [
 	    "bin/brain-even",
 	    "bin/brain-calc",
-	    "bin/brain-gcd"
+	    "bin/brain-gcd",
+	    "bin/brain-progression"
     ],
     "require": {
     	"wp-cli/php-cli-tools": "^0.11.10"
@@ -16,7 +17,8 @@
 	"files": [
 	"games/even.php",
 	"games/calc.php",
-	"games/gcd.php"
+	"games/gcd.php",
+	"games/progression.php"
 	]
     }
 }
