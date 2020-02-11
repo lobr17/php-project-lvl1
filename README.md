@@ -18,3 +18,6 @@ https://asciinema.org/a/pa5WTL1mrMUrLJDvswYb9E0uP
 
 brain-gcd
 https://asciinema.org/a/iN9b76GEcN6moM8nn54RaT3VT
+
+brain-progression
+https://asciinema.org/a/LmXRhH3evpywvABfLY5IACQ08
