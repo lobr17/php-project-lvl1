@@ -7,7 +7,6 @@ use function cli\prompt;
 
 function even()
 {
-
     line('Welcome to Brain Games!');
     line('Answer "yes" if the number is even, otherwise answer "no".');
     $name = prompt('May I have your name?');
