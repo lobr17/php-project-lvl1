@@ -13,7 +13,7 @@ function even()
     line("Hello, %s", $name);
 
 
-   for ($i = 0; $i < 3; $i++) {
+    for ($i = 0; $i < 3; $i++) {
        
        $number = rand(1, 100);
 
