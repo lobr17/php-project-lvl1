@@ -10,7 +10,7 @@
 # Setting
 
 brain-even
-https://asciinema.org/a/Inb0sshZqZzXXJeNU1AqPwksz
+https://asciinema.org/a/kUv1J7oFIAdNNQ66Zjv8rd66Y
 
 
 brain-games: brain-even and brain-calc
