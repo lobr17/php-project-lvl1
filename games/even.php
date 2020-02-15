@@ -15,11 +15,11 @@ function even()
 
     for ($i = 0; $i < 3; $i++) {
        
-       $number = rand(1, 100);
+        $number = rand(1, 100);
 
-       if ($number % 2 === 0) {
-        $answerCorrect = "yes";
-       } else {
+        if ($number % 2 === 0) {
+         $answerCorrect = "yes";
+    } else {
         $answerCorrect = "no";
        }		
        	
