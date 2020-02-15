@@ -12,9 +12,8 @@
 brain-even
 https://asciinema.org/a/kUv1J7oFIAdNNQ66Zjv8rd66Y
 
-
-brain-games: brain-even and brain-calc
-https://asciinema.org/a/pa5WTL1mrMUrLJDvswYb9E0uP
+brain-calc
+https://asciinema.org/a/BrB145Z8pW1bqL6tmQmCXmO2g
 
 brain-gcd
 https://asciinema.org/a/iN9b76GEcN6moM8nn54RaT3VT
