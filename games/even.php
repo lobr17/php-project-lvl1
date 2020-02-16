@@ -1,10 +1,14 @@
 <?php
-
+/**
+ * Задача на определение четности
+ */ 
 namespace BrainGames\Even;
 
 use function cli\line;
 use function cli\prompt;
-
+/**
+ * Функция определение четности
+ */
 function even()
 {
     line('Welcome to Brain Games!');
@@ -20,19 +24,18 @@ function even()
         if ($number % 2 === 0) {
             $answerCorrect = "yes";
         } else {
-        $answerCorrect = "no";
-       }		
-       	
-      line('Question:'.$number);
-      $answer = prompt('You answer');
+            $answerCorrect = "no";
+        }
+        line('Question:'.$number);
+        $answer = prompt('You answer');
 
-      if ($answer !== $answerCorrect) {
-         line("'{$answer}' is wrong answer ;). Correct answer was '{$answerCorrect}'");
-	      exit;		      
-      }
-      line("Correct!");
-   }
-      line("Congratulations, $name");	    
+        if ($answer !== $answerCorrect) {
+            line("'{$answer}' is wrong answer ;).Correct answer was '{$answerCorrect}'");
+            exit;		      
+        }
+        line("Correct!");
+    }
+        line("Congratulations, $name");	    
 }
 
 
