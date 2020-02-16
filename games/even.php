@@ -18,8 +18,8 @@ function even()
         $number = rand(1, 100);
 
         if ($number % 2 === 0) {
-         $answerCorrect = "yes";
-    } else {
+            $answerCorrect = "yes";
+        } else {
         $answerCorrect = "no";
        }		
        	
