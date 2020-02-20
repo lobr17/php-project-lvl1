@@ -13,7 +13,3 @@ use function BrainGames\Even\even;
 
 even();
 
-//use function BrainGames\Cli\run;
-
-//run();
-
