@@ -22,11 +22,11 @@
     },
     "autoload": {
 	"files": [
-	"games/even.php",
-	"games/calc.php",
-	"games/gcd.php",
-	"games/progression.php",
-	"games/prime.php"
+	"src/games/even.php",
+	"src/games/calc.php",
+	"src/games/gcd.php",
+	"src/games/progression.php",
+	"src/games/prime.php"
 	]
     }
 }
