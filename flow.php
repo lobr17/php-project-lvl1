@@ -12,16 +12,12 @@ use function BrainGames\Even\even;
 
 function evenPart()
 {
-	global $number;
-//	global $answer;
+        global $answer;
+	$GLOBALS['number'] = rand(1, 100);
+ 	
+	line('Question:'.$GLOBALS['number']);
+        $answer = prompt('You answer');
 
-	$number = rand(1, 100);
-        $GLOBALS['number'] = $number; 	
-	line('Question:'.$number);
-       // $answer = prompt('You answer');
-	$GLOBALS['answer'] = prompt('You answer');
-	// return $answer;
-	$answer = $GLOBALS['answer'];
 	return $answer;
  	return $GLOBALS['number'];
 }
@@ -33,8 +29,7 @@ function gameProcess()
     $name = prompt('May I have your name?');
     line("Hello, %s", $name);
 
-    for ($i = 0; $i < 3; $i++) {
-        global $number;	  
+    for ($i = 0; $i < 3; $i++) { 
         global $answer;
 
         evenPart();
