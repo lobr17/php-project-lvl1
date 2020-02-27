@@ -64,12 +64,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "6070b6083e0ab6cd3de43dea69ec820884836aac"
+                "reference": "b154f0224cdfb6479374321c27f2442c88861603"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/6070b6083e0ab6cd3de43dea69ec820884836aac",
-                "reference": "6070b6083e0ab6cd3de43dea69ec820884836aac",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/b154f0224cdfb6479374321c27f2442c88861603",
+                "reference": "b154f0224cdfb6479374321c27f2442c88861603",
                 "shasum": ""
             },
             "require": {
@@ -107,7 +107,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2020-02-09T23:53:48+00:00"
+            "time": "2020-02-24T21:17:08+00:00"
         }
     ],
     "aliases": [],

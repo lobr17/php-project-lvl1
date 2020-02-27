@@ -10,6 +10,10 @@ if (file_exists($autoloadPath1)) {
 }
 
 use function BrainGames\Even\even;
+use function BrainGames\Flow\gameProcess;
 
-even();
+global $number;
 
+
+even($number);
+gameProcess();
