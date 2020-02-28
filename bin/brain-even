@@ -10,9 +10,8 @@ if (file_exists($autoloadPath1)) {
 }
 
 use function BrainGames\Flow\gameProcess;
-use function BrainGames\Flow\gamesPart;
+//use function BrainGames\Flow\gamesPart;
 
 $GLOBALS['games'] = 'even';
 
-//gamesPart($GLOBALS['games']);
 gameProcess();

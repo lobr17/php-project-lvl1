@@ -24,14 +24,19 @@ function gamesPart($gam)
 
 function evenPart()
 {
-        global $answer;
+	global $answer;
+	global $answerCorrect;
+
 	$GLOBALS['number'] = rand(1, 100);
  	
 	line('Question:'.$GLOBALS['number']);
         $answer = prompt('You answer');
-        
+
+        $answerCorrect = even($GLOBALS['number']);
+
 	return $answer;
- 	return $GLOBALS['number'];
+	return $GLOBALS['number'];
+	return $answerCorrect;
 }
 
 
@@ -50,11 +55,9 @@ function gameProcess()
 
     for ($i = 0; $i < 3; $i++) { 
         global $answer;
-//        global $gam;
+        global $answerCorrect;
 
         gamesPart($GLOBALS['games']);
-
-        $answerCorrect = even($GLOBALS['number']);
         
 	if ($answer !== $answerCorrect) {
             line("'{$answer}' is wrong answer ;).Correct answer was '{$answerCorrect}'");
