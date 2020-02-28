@@ -10,6 +10,18 @@ use function cli\line;
 use function cli\prompt;
 use function BrainGames\Even\even;
 
+
+function gamesPart($gam)
+{
+	if ($gam === 'even') {
+		 return evenPart();
+	}
+	if ($gam === 'calc') {
+		return calcPart();
+	}
+}
+
+
 function evenPart()
 {
         global $answer;
@@ -17,10 +29,17 @@ function evenPart()
  	
 	line('Question:'.$GLOBALS['number']);
         $answer = prompt('You answer');
-
+        
 	return $answer;
  	return $GLOBALS['number'];
 }
+
+
+function calcPart()
+{
+	
+}
+
 
 function gameProcess()
 {
@@ -31,8 +50,9 @@ function gameProcess()
 
     for ($i = 0; $i < 3; $i++) { 
         global $answer;
+//        global $gam;
 
-        evenPart();
+        gamesPart($GLOBALS['games']);
 
         $answerCorrect = even($GLOBALS['number']);
         

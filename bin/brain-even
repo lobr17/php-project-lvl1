@@ -9,11 +9,10 @@ if (file_exists($autoloadPath1)) {
     require_once $autoloadPath2;
 }
 
-use function BrainGames\Even\even;
 use function BrainGames\Flow\gameProcess;
+use function BrainGames\Flow\gamesPart;
 
-global $number;
+$GLOBALS['games'] = 'even';
 
-
-even($number);
+//gamesPart($GLOBALS['games']);
 gameProcess();
