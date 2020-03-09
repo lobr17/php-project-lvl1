@@ -67,7 +67,7 @@ function calcPart()
     $answer = prompt('You answer');
 
     //Вызов функции расчета математического выражения
-    $answerCorrect = calc($GLOBALS['numberOne'], $GLOBALS['sign'], $GLOBALS['numberTwo']);
+    $answerCorrect = calc();
 
     return $answer;
     return $answerCorrect;

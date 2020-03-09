@@ -5,10 +5,9 @@
 
 namespace BrainGames\Calc;
 
-function calc($numberOne, $sign, $numberTwo)
-{
-    //Правильный результат вычислений.
-    eval('$answerCorrect = ' .$numberOne.$sign.$numberTwo.';');	    
+function calc()
+{ 
+    eval('$answerCorrect = ' .$GLOBALS['numberOne'].$GLOBALS['sign'].$GLOBALS['numberTwo'].';');
 
    $GLOBALS['answerCorrect'] = $answerCorrect;
 
