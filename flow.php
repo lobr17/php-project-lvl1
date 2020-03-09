@@ -15,7 +15,7 @@ use function BrainGames\Even\even;
 //ПОдключение функции калькулятор.
 use function BrainGames\Calc\calc;
 
-//функция для вставки в игровой процесс данных от текущей задачи.
+//функция для вставки в игровой процесс данных от выбранной задачи.
 function gamesPart($gam)
 {
 	if ($gam === 'even') {
@@ -44,12 +44,11 @@ function evenPart()
 	return $answerCorrect;
 }
 
-
+//Для калькулятора.
 function calcPart()
 {
     global $answer;
-    global $answerCorrect;
-    //answerCorrect = 0;    
+    global $answerCorrect;    
 
     //Два рандомных числа.
     $GLOBALS['numberOne'] = rand(1, 100);
@@ -67,7 +66,7 @@ function calcPart()
     line('Question: '."{$GLOBALS['numberOne']}{$GLOBALS['sign']}{$GLOBALS['numberTwo']}");
     $answer = prompt('You answer');
 
-    //Функция расчета математического выражения
+    //Вызов функции расчета математического выражения
     $answerCorrect = calc($GLOBALS['numberOne'], $GLOBALS['sign'], $GLOBALS['numberTwo']);
 
     return $answer;
