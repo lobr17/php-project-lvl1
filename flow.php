@@ -8,9 +8,14 @@ namespace BrainGames\Flow;
 
 use function cli\line;
 use function cli\prompt;
+
+//Подключение функции по определению четности числа.
 use function BrainGames\Even\even;
 
+//ПОдключение функции калькулятор.
+use function BrainGames\Calc\calc;
 
+//функция для вставки в игровой процесс данных от текущей задачи.
 function gamesPart($gam)
 {
 	if ($gam === 'even') {
@@ -21,7 +26,7 @@ function gamesPart($gam)
 	}
 }
 
-
+//Для задачи по определению четности числа.
 function evenPart()
 {
 	global $answer;
@@ -42,7 +47,32 @@ function evenPart()
 
 function calcPart()
 {
-	
+    global $answer;
+    global $answerCorrect;
+    //answerCorrect = 0;    
+
+    //Два рандомных числа.
+    $GLOBALS['numberOne'] = rand(1, 100);
+    $GLOBALS['numberTwo'] = rand(1, 100);
+
+    //Рандомный математический знак из трёх.
+    $GLOBALS['operationArr'] = ['-','+','*'];
+    $GLOBALS['operationRand'] = array_rand($GLOBALS['operationArr'],1);
+   
+    $operationRand = $GLOBALS['operationRand'];
+    $operationArr = $GLOBALS['operationArr'];
+    $GLOBALS['sign'] = $operationArr[$operationRand];
+
+    //Вопрос пользователю.
+    line('Question: '."{$GLOBALS['numberOne']}{$GLOBALS['sign']}{$GLOBALS['numberTwo']}");
+    $answer = prompt('You answer');
+
+    //Функция расчета математического выражения
+    $answerCorrect = calc($GLOBALS['numberOne'], $GLOBALS['sign'], $GLOBALS['numberTwo']);
+
+    return $answer;
+    return $answerCorrect;
+
 }
 
 
@@ -58,8 +88,8 @@ function gameProcess()
         global $answerCorrect;
 
         gamesPart($GLOBALS['games']);
-        
-	if ($answer !== $answerCorrect) {
+
+	if ($answer != $answerCorrect) {
             line("'{$answer}' is wrong answer ;).Correct answer was '{$answerCorrect}'");
             exit;
         }
