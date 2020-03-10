@@ -15,6 +15,9 @@ use function BrainGames\Even\even;
 //ПОдключение функции калькулятор.
 use function BrainGames\Calc\calc;
 
+//Подключение фунции НОД.
+use function BrainGames\Gcd\gcd;
+
 //функция для вставки в игровой процесс данных от выбранной задачи.
 function gamesPart($gam)
 {
@@ -23,6 +26,9 @@ function gamesPart($gam)
 	}
 	if ($gam === 'calc') {
 		return calcPart();
+	}
+	if ($gam === 'gcd') {
+		return gcdPart();
 	}
 }
 
@@ -74,6 +80,25 @@ function calcPart()
 
 }
 
+//Для определения НОД.
+function gcdPart()
+{
+	global $answer;
+	global $answerCorrect;
+
+        $GLOBALS['numberOne'] = rand(1, 100);
+        $GLOBALS['numberTwo'] = rand(1, 100);
+
+//Вопрос пользователю.
+        line('Question:' ."{$GLOBALS['numberOne']} {$GLOBALS['numberTwo']}");              
+	$answer = prompt('You answer');
+
+//Вызов фунции НОД.
+$answerCorrect = gcd();
+
+return $answer;
+return $answerCorrect;
+}
 
 function gameProcess()
 {
