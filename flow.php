@@ -18,6 +18,9 @@ use function BrainGames\Calc\calc;
 //Подключение фунции НОД.
 use function BrainGames\Gcd\gcd;
 
+//Подключение к функции арифметической прогрессии.
+use function BrainGames\Progression\progression;
+
 //функция для вставки в игровой процесс данных от выбранной задачи.
 function gamesPart($gam)
 {
@@ -29,6 +32,9 @@ function gamesPart($gam)
 	}
 	if ($gam === 'gcd') {
 		return gcdPart();
+	}
+	if ($gam === 'progression') {
+		return progressionPart();
 	}
 }
 
@@ -98,6 +104,32 @@ $answerCorrect = gcd();
 
 return $answer;
 return $answerCorrect;
+}
+
+//Для задачи арифметической прогрессии.
+function progressionPart()
+{
+
+	global $answer;
+	global $answerCorrect;
+	
+        $GLOBALS['firstNumber'] = rand(1,100);
+        $GLOBALS['step'] = rand(1,10);
+        $GLOBALS['invisibility'] = rand(0,9);
+
+	//Получение строки прогрессии и правильного невидимого значения.
+	progression();
+
+        $answerCorrect = $GLOBALS['answerCorrect'];
+
+        //Вопрос пользователю.
+        line('Question:' ."{$GLOBALS['conclusion']}");
+        $answer = prompt('You answer');
+
+
+	return $answer;
+	return $answerCorrect;
+
 }
 
 function gameProcess()

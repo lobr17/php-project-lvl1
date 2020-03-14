@@ -1,28 +1,19 @@
 <?php
+/**
+ * Арифметическая прогрессия.
+ */
 
 namespace BrainGames\Progression;
 
-use function cli\line;
-use function cli\prompt;
-
 function progression()
 {
-
-    line('Welcome to Brain Games!');
-    line('What number is missing in the progression?');
-    $name = prompt('May I have your name?');
-    line("Hello, %s", $name);
-   
-
-	$firstNumber = rand(1,100);
-	$step = rand(1,10);
-	$invisibility = rand(0, 9);
-
-	$arr[] = $firstNumber;
+	$arr[] = $GLOBALS['firstNumber'];
 
 	for ($i = 1; $i < 10; $i++) {
-  	  $arr[] .= $arr[$i-1] + $step;
+  	  $arr[] .= $arr[$i-1] + $GLOBALS['step'];
 	}
+
+	$invisibility = $GLOBALS['invisibility'];
 
 	$answerCorrect = $arr[$invisibility];
 	$arr[$invisibility] = '..';
@@ -34,20 +25,13 @@ function progression()
 		$conclusion .= $value . ' ';
 	};
 
+        $GLOBALS['conclusion'] = $conclusion;
+        $GLOBALS['answerCorrect'] = $answerCorrect;
 
-           //---вопрос---
- 	line('Question:' ."{$conclusion}");
-        $answer = prompt('You answer');
+        return $GLOBALS['conclusion']; 
 
-	   if ($answer != $answerCorrect) {
-		   line("'{$answer}' is wrong answer ;). Correct answer was '{$answerCorrect}'");
-		   exit;
-
-	   }
-	   line("Correct");
-   
-
-      line("Congratulations, $name");	    
+	return $GLOBALS['answerCorrect'];
+	    
 }
 
 
