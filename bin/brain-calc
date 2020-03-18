@@ -12,5 +12,6 @@ if (file_exists($autoloadPath1)) {
 use function BrainGames\Flow\gameProcess;
 
 $GLOBALS['games'] = 'calc';
+$GLOBALS['str'] = 'What is the result of expression?';
 
 gameProcess();

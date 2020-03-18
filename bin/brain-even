@@ -12,5 +12,6 @@ if (file_exists($autoloadPath1)) {
 use function BrainGames\Flow\gameProcess;
 
 $GLOBALS['games'] = 'even';
+$GLOBALS['str'] = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 gameProcess();
