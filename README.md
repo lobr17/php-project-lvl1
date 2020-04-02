@@ -7,17 +7,4 @@
 
 # Setting
 
-brain-even
-https://asciinema.org/a/kUv1J7oFIAdNNQ66Zjv8rd66Y
-
-brain-calc
-https://asciinema.org/a/BrB145Z8pW1bqL6tmQmCXmO2g
-
-brain-gcd
-https://asciinema.org/a/iN9b76GEcN6moM8nn54RaT3VT
-
-brain-progression
-https://asciinema.org/a/LmXRhH3evpywvABfLY5IACQ08
-
-brain-prime
-https://asciinema.org/a/u7TKfR8ycaO3xeXrPotLOpmEO
+https://asciinema.org/a/djNWV8atovtdwREX8YGupPn4e
