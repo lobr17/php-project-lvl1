@@ -7,13 +7,15 @@ namespace BrainGames\Progression;
 
 function progression()
 {
-	$arr[] = $GLOBALS['firstNumber'];
+        $numberRand = rand(1, 100);
+	$step = rand(1, 10);
+	$invisibility = rand(0, 9);
+
+	$arr[] = $numberRand;
 
 	for ($i = 1; $i < 10; $i++) {
-  	  $arr[] .= $arr[$i-1] + $GLOBALS['step'];
+  	  $arr[] .= $arr[$i-1] + $step;
 	}
-
-	$invisibility = $GLOBALS['invisibility'];
 
 	$answerCorrect = $arr[$invisibility];
 	$arr[$invisibility] = '..';
@@ -25,13 +27,7 @@ function progression()
 		$conclusion .= $value . ' ';
 	};
 
-        $GLOBALS['conclusion'] = $conclusion;
-        $GLOBALS['answerCorrect'] = $answerCorrect;
-
-        return $GLOBALS['conclusion']; 
-
-	return $GLOBALS['answerCorrect'];
-	    
+	return array ($answerCorrect, $conclusion);	    
 }
 
 

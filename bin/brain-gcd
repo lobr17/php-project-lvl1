@@ -11,7 +11,4 @@ if (file_exists($autoloadPath1)) {
 
 use function BrainGames\Flow\gameProcess;
 
-$GLOBALS['games'] = 'gcd';
-$GLOBALS['str'] = 'Find the greatest common divisor of given numbers.';
-
-gameProcess();
+gameProcess('Find the greatest common divisor of given numbers.', 'gcd');

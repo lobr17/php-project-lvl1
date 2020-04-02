@@ -5,13 +5,18 @@
 
 namespace BrainGames\Even;
 
-function even($num)
+function even()
 {   
-    if ($num % 2 === 0){
+    $numberRand = rand(1, 100);
+    $question = $numberRand;	
+
+    if ($numberRand % 2 === 0){
         $answerCorrect = "yes";
-    }else{
+    } else {
         $answerCorrect = "no";
     }
-    return $answerCorrect;
+
+      return array ($answerCorrect, $question);
+
 }
 

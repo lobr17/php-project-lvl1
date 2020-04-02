@@ -11,7 +11,4 @@ if (file_exists($autoloadPath1)) {
 
 use function BrainGames\Flow\gameProcess;
 
-$GLOBALS['games'] = 'prime';
-$GLOBALS['str'] = 'Answer "yes" if given number is prime. Otherwise answer "no"';
-
-gameProcess();
+gameProcess('Answer "yes" if given number is prime. Otherwise answer "no"', 'prime');

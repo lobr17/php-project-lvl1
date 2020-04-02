@@ -7,12 +7,33 @@ namespace BrainGames\Calc;
 
 function calc()
 { 
-    eval('$answerCorrect = ' .$GLOBALS['numberOne'].$GLOBALS['sign'].$GLOBALS['numberTwo'].';');
 
-   $GLOBALS['answerCorrect'] = $answerCorrect;
+	$numberRandOne = rand(1, 100);
+	$numberRandTwo = rand(1, 100);
 
-   return $GLOBALS['answerCorrect'];
-    
+	//Рандомный математический знак.
+	
+	$operationArr = ['-','+','*'];
+	$operationRand = array_rand($operationArr, 1);
+        $sign = $operationArr[$operationRand];	
+        
+	$question = "{$numberRandOne}{$sign}{$numberRandTwo}";
+
+	//Калькулятор.
+	
+	switch ($sign) {
+	case '-':
+		$answerCorrect = $numberRandOne - $numberRandTwo;
+		break;
+	case '+':
+                $answerCorrect = $numberRandOne + $numberRandTwo;
+		break;
+	case '*':
+                $answerCorrect = $numberRandOne * $numberRandTwo;
+                break;	
+	}
+
+	return array ($answerCorrect, $question);
 }
 
 

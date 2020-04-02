@@ -5,9 +5,11 @@ namespace BrainGames\Prime;
 use function cli\line;
 use function cli\prompt;
 
-function prime($number)
-{      
-    $prime = gmp_prob_prime($number);
+function prime()
+{   
+    $numberRand = rand(0, 100);
+
+    $prime = gmp_prob_prime($numberRand);
     
     if ($prime === 0 ) {
     	$answerCorrect = 'no';
@@ -15,7 +17,7 @@ function prime($number)
         $answerCorrect = 'yes';
     }
 	
-    return $answerCorrect;     
+    return array ($answerCorrect, $numberRand);     
 }
 
 

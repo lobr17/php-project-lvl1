@@ -7,11 +7,14 @@ namespace BrainGames\Gcd;
 
 function gcd()
 {
- 
-           $gcd = gmp_gcd($GLOBALS['numberOne'], $GLOBALS['numberTwo']);
-	   $GLOBALS['answerCorrect'] =  gmp_strval($gcd);
+	$numberRandOne = rand(1, 100);
+	$numberRandTwo = rand(1, 100);
+	$question = "{$numberRandOne} {$numberRandTwo}";
 
-	 return $GLOBALS['answerCorrect'];  
+        $gcd = gmp_gcd($numberRandOne, $numberRandTwo);
+	$answerCorrect =  gmp_strval($gcd);
+
+        return array ($answerCorrect, $question);  
 }
 
 
