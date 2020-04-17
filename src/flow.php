@@ -3,7 +3,7 @@
  *Общий игровой процес
  *
  */
-
+//
 namespace BrainGames\flow;
 
 use function cli\line;
