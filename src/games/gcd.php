@@ -10,7 +10,7 @@ use function BrainGames\flow\gameProcess;
 function start() {
 	gameProcess('Find the greatest common divisor of given numbers.', 'gcd');
 }
-
+//
 function getGcdSub()
 {
 
