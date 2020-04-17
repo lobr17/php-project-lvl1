@@ -2,21 +2,26 @@
 /**
  * Функция для определения четности.
  */
+  
+namespace BrainGames\even;
 
-namespace BrainGames\Even;
 
-function even()
-{   
-    $numberRand = rand(1, 100);
-    $question = $numberRand;	
+use function  BrainGames\flow\gameProcess;
 
-    if ($numberRand % 2 === 0){
-        $answerCorrect = "yes";
-    } else {
-        $answerCorrect = "no";
-    }
 
-      return array ($answerCorrect, $question);
+function start()
+{	
+    gameProcess('Answer "yes" if the number is even, otherwise answer "no".', 'even');
 
 }
+
+function even()
+        {
+                $numberRand = rand(1, 100);
+                $question = $numberRand;
+
+                $numberRand % 2 === 0 ? $answerCorrect = "yes" : $answerCorrect = "no";
+
+		 return array ($answerCorrect, $question);
+        }
 

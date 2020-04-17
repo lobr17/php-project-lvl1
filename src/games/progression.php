@@ -12,8 +12,9 @@ function progression()
 	$invisibility = rand(0, 9);
 
 	$arr[] = $numberRand;
+	$progrLength = 10;
 
-	for ($i = 1; $i < 10; $i++) {
+	for ($i = 1; $i < $progrLength; $i++) {
   	  $arr[] .= $arr[$i-1] + $step;
 	}
 
