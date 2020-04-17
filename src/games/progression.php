@@ -3,7 +3,14 @@
  * Арифметическая прогрессия.
  */
 
-namespace BrainGames\Progression;
+namespace BrainGames\progression;
+
+use function BrainGames\flow\gameProcess;
+
+function start()
+{
+	gameProcess('What number is missing in the progression?', 'progression');
+}
 
 function progression()
 {

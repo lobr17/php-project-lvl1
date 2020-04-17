@@ -3,7 +3,16 @@
  *Математическая фунция.
  */
 
-namespace BrainGames\Calc;
+namespace BrainGames\calc;
+
+use function BrainGames\flow\gameProcess;
+
+
+function start()
+{
+	gameProcess('What is the result of expression?', 'calc');
+}
+
 
 function calc()
 { 

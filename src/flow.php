@@ -14,13 +14,13 @@ use function cli\prompt;
 use function BrainGames\even\even;
 
 //ПОдключение функции калькулятор.
-use function BrainGames\Calc\calc;
+use function BrainGames\calc\calc;
 
 //Подключение фунции НОД.
 use function BrainGames\gcd\getGcdSub;
 
 //Подключение к функции арифметической прогрессии.
-use function BrainGames\Progression\progression;
+use function BrainGames\progression\progression;
 
 //Подключение к функции определения простого числа.
 use function BrainGames\prime\isPrime;

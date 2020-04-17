@@ -16,7 +16,6 @@
     "type": "package",
     "description": "first project",
     "license": "MIT",
-    "minimum-stability": "dev",
     "scripts": {
     	"phpcs": "phpcs"
     },
