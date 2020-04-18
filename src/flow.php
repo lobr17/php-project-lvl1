@@ -8,22 +8,7 @@ namespace BrainGames\flow;
 
 use function cli\line;
 use function cli\prompt;
-
-
-//Подключение функции по определению четности числа.
-use function BrainGames\even\even;
-
-//ПОдключение функции калькулятор.
-use function BrainGames\calc\calc;
-
-//Подключение фунции НОД.
-use function BrainGames\gcd\getGcdSub;
-
-//Подключение к функции арифметической прогрессии.
-use function BrainGames\progression\progression;
-
-//Подключение к функции определения простого числа.
-use function BrainGames\prime\isPrime;
+use BrainGames;
 
 
 function gameProcess($str, $games)
@@ -41,19 +26,19 @@ function gameProcess($str, $games)
 
 	switch ($games) {
 		case 'even':
-			[$answerCorrect, $question] = even();
+			[$answerCorrect, $question] = BrainGames\even\even();
 			break;
 		case 'gcd':
-                        [$answerCorrect, $question] = getGcdSub();
+                        [$answerCorrect, $question] = BrainGames\gcd\getGcdSub();
 			break;
 		case 'calc':
-                        [$answerCorrect, $question] = calc();
+                        [$answerCorrect, $question] = BrainGames\calc\calc();
 			break;
 		case 'progression':
-                        [$answerCorrect, $question] = progression();
+                        [$answerCorrect, $question] = BrainGames\progression\progression();
 			break;
 		case 'prime':
-                        [$answerCorrect, $question] = isPrime();
+                        [$answerCorrect, $question] = BrainGames\prime\isPrime();
                         break;	
 	}	    
 
