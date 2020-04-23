@@ -7,6 +7,26 @@ use function cli\prompt;
 
 use function BrainGames\flow\gameProcess;
 
+function isPrimeSub($numberRand)
+{
+	$answerCorrect = '';
+	
+    if ($numberRand === 1) {
+                $answerCorrect = 'no';
+    } else {
+//перебираем возможные делители от 2 до sqrt($numberRand).              
+                for ($dev = 2; $dev * $dev <= $numberRand; $dev++ ) {
+                        if ($numberRand % $dev === 0) {
+                                $answerCorrect = 'no';
+                                break;
+                        } else {
+                                $answerCorrect = 'yes';
+                        }
+            }
+      }
+	return $answerCorrect;
+}	
+
 
 function isPrime()
 {
@@ -17,25 +37,10 @@ function isPrime()
 
 	$numberRand = rand(0, 100);
 	$question = $numberRand;
-        $answerCorrect = '';
 
-	if ($numberRand === 1) {
-		$answerCorrect = 'no';
-	} else {
-//перебираем возможные делители от 2 до sqrt($numberRand).		
-		for ($dev = 2; $dev * $dev <= $numberRand; $dev++ ) {
-			if ($numberRand % $dev === 0) {
-				$answerCorrect = 'no';
-				break;
-			} else {
-				$answerCorrect = 'yes';
-			}
-		}
-	}	
-
-	$arr[$question] = $answerCorrect;
+	$arr[$question] = isPrimeSub($numberRand);
     }	
 	gameProcess($str, $arr);
 }
 
-
+isPrimeSub($numberRand);
