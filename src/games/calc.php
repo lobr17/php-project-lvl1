@@ -8,14 +8,12 @@ namespace BrainGames\calc;
 use function BrainGames\flow\gameProcess;
 
 
-function start()
-{
-	gameProcess('What is the result of expression?', 'calc');
-}
-
-
 function calc()
 { 
+       	$str = 'What is the result of expression?';
+	$arr = [];
+
+    for ($i = 0; $i < 3; $i++) {
 
 	$numberRandOne = rand(1, 100);
 	$numberRandTwo = rand(1, 100);
@@ -42,7 +40,8 @@ function calc()
                 break;	
 	}
 
-	return array ($answerCorrect, $question);
+	$arr[$question] = $answerCorrect;
+
+    }	
+	gameProcess($str, $arr);
 }
-
-

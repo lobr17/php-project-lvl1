@@ -7,35 +7,39 @@ namespace BrainGames\progression;
 
 use function BrainGames\flow\gameProcess;
 
-function start()
+
+function isProgression()
 {
-	gameProcess('What number is missing in the progression?', 'progression');
-}
+        $str = 'What number is missing in the progression?';
+	$arr = [];
 
-function progression()
-{
-        $numberRand = rand(1, 100);
-	$step = rand(1, 10);
-	$invisibility = rand(0, 9);
+    for ($j = 0; $j < 3; $j++) {	
 
-	$arr[] = $numberRand;
-	$progrLength = 10;
-
-	for ($i = 1; $i < $progrLength; $i++) {
-  	  $arr[] .= $arr[$i-1] + $step;
+        $arr1 = [];
+        $answerCorrect = '';
+	$diff = rand(1, 10);
+	$start = rand(1, 100);
+	$progrLength = rand(3, 10);
+	
+	for ($i = 0; $i < $progrLength; $i++) {
+  	  $arr1[$i] = $start + $diff * $i;
 	}
 
-	$answerCorrect = $arr[$invisibility];
-	$arr[$invisibility] = '..';
+        $invisibility = rand(0, count($arr1)-1);
+
+	$answerCorrect = $arr1[$invisibility];
+	$arr1[$invisibility] = '..';
 
 	//---строка вывода---
-	$conclusion = '';
+	$question = '';
 
-	foreach ($arr as $value) {
-		$conclusion .= $value . ' ';
+	foreach ($arr1 as $value) {
+		$question .= $value . ' ';
 	};
-
-	return array ($answerCorrect, $conclusion);	    
+        
+	$arr[$question] = $answerCorrect; 
+    }	
+	gameProcess($str, $arr);
 }
 
 

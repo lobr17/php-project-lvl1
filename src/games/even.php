@@ -5,27 +5,24 @@
   
 namespace BrainGames\even;
 
-
 use function  BrainGames\flow\gameProcess;
 
-function evenOne()
-{
-print_r('HREF');
-}
-
-function start()
-{	
-    gameProcess('Answer "yes" if the number is even, otherwise answer "no".', 'even');
-
-}
 
 function even()
-        {
-                $numberRand = rand(1, 100);
-                $question = $numberRand;
+{
+		$str = 'Answer "yes" if the number is even, otherwise answer "no".';
+		
+		$arr = [];
 
-                $numberRand % 2 === 0 ? $answerCorrect = "yes" : $answerCorrect = "no";
+		for ($i = 0; $i < 3; $i++) {
+			
+               		$numberRand = rand(1, 100);
+                	$question = $numberRand;
 
-		 return array ($answerCorrect, $question);
-        }
+			$numberRand % 2 === 0 ? $answerCorrect = "yes" : $answerCorrect = "no";
 
+			$arr[$question] = $answerCorrect; 
+		}
+
+		 gameProcess($str, $arr);
+}

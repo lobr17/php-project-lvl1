@@ -7,16 +7,17 @@ use function cli\prompt;
 
 use function BrainGames\flow\gameProcess;
 
-function start()
-{
-	gameProcess('Answer "yes" if given number is prime. Otherwise answer "no"', 'prime');
-}
-
 
 function isPrime()
-{   
+{
+        $str = 'Answer "yes" if given number is prime. Otherwise answer "no"';
+        $arr = [];
+
+    for ($i = 0; $i < 3; $i++) {
+
 	$numberRand = rand(0, 100);
-	$answerCorrect = '';
+	$question = $numberRand;
+        $answerCorrect = '';
 
 	if ($numberRand === 1) {
 		$answerCorrect = 'no';
@@ -31,8 +32,10 @@ function isPrime()
 			}
 		}
 	}	
-	
-    return array ($answerCorrect, $numberRand);     
+
+	$arr[$question] = $answerCorrect;
+    }	
+	gameProcess($str, $arr);
 }
 
 
