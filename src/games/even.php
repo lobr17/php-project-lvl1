@@ -10,19 +10,16 @@ use function  BrainGames\flow\gameProcess;
 
 function even()
 {
-		$str = 'Answer "yes" if the number is even, otherwise answer "no".';
-		
-		$arr = [];
+    $str = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-		for ($i = 0; $i < 3; $i++) {
-			
-               		$numberRand = rand(1, 100);
-                	$question = $numberRand;
+    $func = function()
+    {
+        $question = rand(1, 100);
 
-			$numberRand % 2 === 0 ? $answerCorrect = "yes" : $answerCorrect = "no";
+        $question % 2 === 0 ? $answerCorrect = "yes" : $answerCorrect = "no";
 
-			$arr[$question] = $answerCorrect; 
-		}
+        return array ($question, $answerCorrect);
+    };
 
-		 gameProcess($str, $arr);
+    gameProcess($str, $func); 
 }
