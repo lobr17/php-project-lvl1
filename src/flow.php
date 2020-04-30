@@ -1,6 +1,6 @@
 <?php
 /**
- *Общий игровой процес
+ * Общий игровой процес
  *
  */
 
@@ -11,32 +11,29 @@ use function cli\prompt;
 
 use BrainGames;
 
-function gameProcess($str, $func)
+function gameProcess($title, $dataGame)
 {	
-    $answer = '';
-    $answerCorrect = '';
-    $question = '';
     $numberRound = 3;
 
     line('Welcome to Brain Games!');
-    line($str);
-    $name = prompt('May I have your name?');
-    line("Hello, %s", $name);
+    line($title);
+    $nameUser = prompt('May I have your name?');
+    line("Hello, %s", $nameUser);
 
     for ($i = 0; $i < $numberRound; $i++) {
-        [$question, $answerCorrect] = $func();
+	    [$question, $answerCorrect] = $dataGame();
 
         line('Question:'.$question);       
 
-        $answer = prompt('You answer');
+        $answerUser = prompt('You answer');
 
-        if ($answer != $answerCorrect) {
-            line("'{$answer}' is wrong answer ;).Correct answer was '{$answerCorrect}'");
-        exit;
+        if ($answerUser != $answerCorrect) {
+            line("'{$answerUser}' is wrong answer ;).Correct answer was '{$answerCorrect}'");
+              exit;
         }
 
         line("Correct!");
     }
 
-    line("Congratulations, $name");	
+    line("Congratulations, $nameUser");	
 }

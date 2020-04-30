@@ -8,11 +8,11 @@ namespace BrainGames\even;
 use function  BrainGames\flow\gameProcess;
 
 
-function even()
+function isEven()
 {
-    $str = 'Answer "yes" if the number is even, otherwise answer "no".';
+    $title = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-    $func = function()
+    $dataGame = function ()
     {
         $question = rand(1, 100);
 
@@ -21,5 +21,5 @@ function even()
         return array ($question, $answerCorrect);
     };
 
-    gameProcess($str, $func); 
+    gameProcess($title, $dataGame); 
 }

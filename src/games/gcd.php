@@ -10,37 +10,36 @@ use function BrainGames\flow\gameProcess;
 
 function getGcdSub()
 {
-	$str = 'Find the greatest common divisor of given numbers.';
+    $title = 'Find the greatest common divisor of given numbers.';
 
-	$arr = [];
+    $dataGame = function ()
+    {	    
 
-    for ($i = 0; $i < 3; $i++) {	
-
-	$great = rand(1, 100);
-        $small = rand(1, 100);
-	$question = "{$great} {$small}";
+	$firstNumber = rand(1, 100);
+        $secondNumber = rand(1, 100);
+	$question = "{$firstNumber} {$secondNumber}";
 	
-	$answerCorrect = getGcd($great, $small);
+	$answerCorrect = getGcd($firstNumber, $secondNumber);
  	
-	$arr[$question] = $answerCorrect;
-    }
+        return array ($question, $answerCorrect);
+    };
 
-	gameProcess($str, $arr);
+	gameProcess($title, $dataGame);
 
 }
 
 
 
-function getGcd($great, $small)
+function getGcd($firstNumber, $secondNumber)
 {
-    while ($great != 0 and $small != 0) {
-        if ($great > $small) {
-            $great = $great % $small;
+    while ($firstNumber != 0 and $secondNumber != 0) {
+        if ($firstNumber > $secondNumber) {
+            $firstNumber = $firstNumber % $secondNumber;
         } else {
-            $small = $small % $great;
+            $secondNumber = $secondNumber % $firstNumber;
         }
     }
-	return $great + $small;
+	return $firstNumber + $secondNumber;
 }
 
 

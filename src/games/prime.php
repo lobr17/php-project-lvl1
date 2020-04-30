@@ -6,14 +6,14 @@ use function cli\prompt;
 
 use function BrainGames\flow\gameProcess;
 
-function isPrimeSub($numberRand)
+function isPrimeSub($question)
 {
-    if ($numberRand === 1) {
+    if ($question === 1) {
                 return false;
     } else {
         //перебираем возможные делители от 2 до sqrt($numberRand).              
-        for ($dev = 2; $dev * $dev <= $numberRand; $dev++ ) {
-            if ($numberRand % $dev === 0) {
+        for ($dev = 2; $dev * $dev <= $question; $dev++ ) {
+            if ($question % $dev === 0) {
                                 return false;
                                 break;
             } else {
@@ -23,26 +23,25 @@ function isPrimeSub($numberRand)
     }
 }
 
-function convertBoolNorm($numberRand)
+function convertBoolNorm($question)
 {
-    isPrimeSub($numberRand) ? $answerCorrect = 'yes' : $answerCorrect = 'no';
+    isPrimeSub($question) ? $answerCorrect = 'yes' : $answerCorrect = 'no';
+    
     return $answerCorrect;
 }
 
 
 function isPrime()
 {
-    $str = 'Answer "yes" if given number is prime. Otherwise answer "no"';
-    $arr = [];
+    $title = 'Answer "yes" if given number is prime. Otherwise answer "no"';
 
-    for ($i = 0; $i < 3; $i++) {
-
-        $numberRand = rand(0, 100);
-        $question = $numberRand;
-
-        $arr[$question] = convertBoolNorm($numberRand);
-    }
-    gameProcess($str, $arr);
+    $dataGame = function ()
+    {
+        $question = rand(0, 100);
+        
+        return array ($question, convertBoolNorm($question));
+    };
+    gameProcess($title, $dataGame);
 }
 
 

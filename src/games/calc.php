@@ -8,40 +8,35 @@ namespace BrainGames\calc;
 use function BrainGames\flow\gameProcess;
 
 
-function calc()
+function calculation()
 { 
-       	$str = 'What is the result of expression?';
-	$arr = [];
+    $title = 'What is the result of expression?';
 
-    for ($i = 0; $i < 3; $i++) {
-
-	$numberRandOne = rand(1, 100);
-	$numberRandTwo = rand(1, 100);
-
-	//Рандомный математический знак.
+    $dataGame = function ()
+    {
+        $numberRandOne = rand(1, 100);
+        $numberRandTwo = rand(1, 100);
 	
-	$operationArr = ['-','+','*'];
-	$operationRand = array_rand($operationArr, 1);
-        $sign = $operationArr[$operationRand];	
+        $signs = ['-','+','*'];
+        $operationRand = array_rand($signs, 1);
+        $sign = $signs[$operationRand];	
         
-	$question = "{$numberRandOne}{$sign}{$numberRandTwo}";
-
-	//Калькулятор.
+        $question = "{$numberRandOne}{$sign}{$numberRandTwo}";
 	
-	switch ($sign) {
-	case '-':
-		$answerCorrect = $numberRandOne - $numberRandTwo;
-		break;
-	case '+':
-                $answerCorrect = $numberRandOne + $numberRandTwo;
-		break;
+        switch ($sign) {
+        case '-':
+            $answerCorrect = $numberRandOne - $numberRandTwo;
+            break;
+        case '+':
+            $answerCorrect = $numberRandOne + $numberRandTwo;
+            break;
 	case '*':
-                $answerCorrect = $numberRandOne * $numberRandTwo;
-                break;	
-	}
+            $answerCorrect = $numberRandOne * $numberRandTwo;
+            break;	
+       }
 
-	$arr[$question] = $answerCorrect;
-
-    }	
-	gameProcess($str, $arr);
+        return array ($question, $answerCorrect);
+    };
+    	
+	gameProcess($title, $dataGame);
 }
