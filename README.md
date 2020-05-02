@@ -15,6 +15,6 @@ Via Composer
 
 $ composer require funct/funct
 
-<type>(<scope>): <subject>
-<BLANK LINE>
-<body>
+<type>(<scope>): <subject>esr
+<BLANK LINE>ersdf
+<body>ersdf
