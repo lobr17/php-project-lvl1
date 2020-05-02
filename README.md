@@ -13,6 +13,6 @@ https://asciinema.org/a/djNWV8atovtdwREX8YGupPn4e
 ## Installation
 >Via Composer
 
-<pre> $ composer require funct/funct </pre>
+<pre>$ composer global require yason/brain-games.</pre>
 
 
