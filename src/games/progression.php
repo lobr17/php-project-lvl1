@@ -5,38 +5,29 @@
 
 namespace BrainGames\progression;
 
-use function BrainGames\flow\gameProcess;
+use function BrainGames\flow\startProcessEngine;
 
-
-function isProgression()
+function progression()
 {
     $title = 'What number is missing in the progression?';
-
-    $dataGame = function()
+    $getDataGame = function()
     {    		
-        $numbers = [];
-        $answerCorrect = '';
+        $progression = [];
+        $correctAnswer = '';
 	$diff = rand(1, 10);
 	$start = rand(1, 100);
-	$progrLength = rand(3, 10);
+	$progressionLength = rand(3, 10);
 	
-	for ($i = 0; $i < $progrLength; $i++) {
-  	  $numbers[$i] = $start + $diff * $i;
+	for ($i = 0; $i < $progressionLength; $i++) {
+  	  $progression[$i] = $start + $diff * $i;
 	}
 
-        $invisibility = rand(0, $progrLength);
-
-	$answerCorrect = $numbers[$invisibility];
-	$numbers[$invisibility] = '..';
-
-	$question = '';
-
-        $question = implode(' ', $numbers);
-       
-
-    return array ($question, $answerCorrect);	 
+        $invisibility = rand(0, $progressionLength);
+	$correctAnswer = $start + $diff * $invisibility;	
+	$progression[$invisibility] = '..';
+        $question = implode(' ', $progression);
+      
+        return array ($question, $correctAnswer);
     };	
-	gameProcess($title, $dataGame);
+    startProcessEngine($title, $getDataGame);
 }
-
-

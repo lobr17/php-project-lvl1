@@ -11,29 +11,28 @@ use function cli\prompt;
 
 use BrainGames;
 
-function gameProcess($title, $dataGame)
-{	
-    $numberRound = 3;
+function startProcessEngine($title, $getDataGame)
+{
+    $roundsCount = 3;
 
     line('Welcome to Brain Games!');
     line($title);
     $nameUser = prompt('May I have your name?');
     line("Hello, %s", $nameUser);
 
-    for ($i = 0; $i < $numberRound; $i++) {
-	    [$question, $answerCorrect] = $dataGame();
+    for ($i = 0; $i < $roundsCount; $i++) {
+        [$question, $correctAnswer] = $getDataGame();
 
         line('Question:'.$question);       
 
         $answerUser = prompt('You answer');
 
-        if ($answerUser != $answerCorrect) {
-            line("'{$answerUser}' is wrong answer ;).Correct answer was '{$answerCorrect}'");
+        if ($answerUser != $correctAnswer) {
+            line("'{$answerUser}' is wrong answer ;).Correct answer was '{$correctAnswer}'");
               exit;
         }
 
         line("Correct!");
     }
-
     line("Congratulations, $nameUser");	
 }

@@ -4,44 +4,32 @@ namespace BrainGames\prime;
 use function cli\line;
 use function cli\prompt;
 
-use function BrainGames\flow\gameProcess;
+use function BrainGames\flow\startProcessEngine;
 
 function isPrimeSub($question)
 {
-    if ($question === 1) {
-                return false;
+    if ($question === 1 or $question === 0) {
+        return false;
     } else {
         //перебираем возможные делители от 2 до sqrt($numberRand).              
         for ($dev = 2; $dev * $dev <= $question; $dev++ ) {
             if ($question % $dev === 0) {
-                                return false;
-                                break;
+                return false;
+                break;
             } else {
-                                return true;
+                return true;
             }
         }
     }
 }
 
-function convertBoolNorm($question)
-{
-    isPrimeSub($question) ? $answerCorrect = 'yes' : $answerCorrect = 'no';
-    
-    return $answerCorrect;
-}
-
-
-function isPrime()
+function prime()
 {
     $title = 'Answer "yes" if given number is prime. Otherwise answer "no"';
-
-    $dataGame = function ()
+    $getDataGame = function ()
     {
         $question = rand(0, 100);
-        
-        return array ($question, convertBoolNorm($question));
+        return array ($question, isPrimeSub($question) ? 'yes' : 'no');
     };
-    gameProcess($title, $dataGame);
+    startProcessEngine($title, $getDataGame);
 }
-
-

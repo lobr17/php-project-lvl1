@@ -5,21 +5,16 @@
   
 namespace BrainGames\even;
 
-use function  BrainGames\flow\gameProcess;
+use function  BrainGames\flow\startProcessEngine;
 
-
-function isEven()
+function even()
 {
     $title = 'Answer "yes" if the number is even, otherwise answer "no".';
-
-    $dataGame = function ()
+    $getDataGame = function ()
     {
         $question = rand(1, 100);
-
-        $question % 2 === 0 ? $answerCorrect = "yes" : $answerCorrect = "no";
-
-        return array ($question, $answerCorrect);
+        $correctAnswer = $question % 2 === 0 ? "yes" : "no";
+        return array ($question, $correctAnswer);
     };
-
-    gameProcess($title, $dataGame); 
+    startProcessEngine($title, $getDataGame); 
 }

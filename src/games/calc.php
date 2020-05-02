@@ -5,38 +5,32 @@
 
 namespace BrainGames\calc;
 
-use function BrainGames\flow\gameProcess;
-
+use function BrainGames\flow\startProcessEngine;
 
 function calculation()
 { 
     $title = 'What is the result of expression?';
-
-    $dataGame = function ()
+    $getDataGame = function ()
     {
         $numberRandOne = rand(1, 100);
         $numberRandTwo = rand(1, 100);
-	
         $signs = ['-','+','*'];
         $operationRand = array_rand($signs, 1);
         $sign = $signs[$operationRand];	
-        
         $question = "{$numberRandOne}{$sign}{$numberRandTwo}";
-	
+
         switch ($sign) {
         case '-':
-            $answerCorrect = $numberRandOne - $numberRandTwo;
+            $correctAnswer = $numberRandOne - $numberRandTwo;
             break;
         case '+':
-            $answerCorrect = $numberRandOne + $numberRandTwo;
+            $correctAnswer = $numberRandOne + $numberRandTwo;
             break;
 	case '*':
-            $answerCorrect = $numberRandOne * $numberRandTwo;
-            break;	
-       }
-
-        return array ($question, $answerCorrect);
+            $correctAnswer = $numberRandOne * $numberRandTwo;
+     break;	
+        }
+        return array ($question, $correctAnswer);
     };
-    	
-	gameProcess($title, $dataGame);
+    startProcessEngine($title, $getDataGame);
 }

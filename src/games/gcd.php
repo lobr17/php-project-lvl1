@@ -5,30 +5,21 @@
 
 namespace BrainGames\gcd;
 
-use function BrainGames\flow\gameProcess;
-
+use function BrainGames\flow\startProcessEngine;
 
 function getGcdSub()
 {
     $title = 'Find the greatest common divisor of given numbers.';
-
-    $dataGame = function ()
+    $getDataGame = function ()
     {	    
-
 	$firstNumber = rand(1, 100);
         $secondNumber = rand(1, 100);
 	$question = "{$firstNumber} {$secondNumber}";
-	
-	$answerCorrect = getGcd($firstNumber, $secondNumber);
- 	
-        return array ($question, $answerCorrect);
+	$correctAnswer = getGcd($firstNumber, $secondNumber);
+        return array ($question, $correctAnswer);
     };
-
-	gameProcess($title, $dataGame);
-
+    startProcessEngine($title, $getDataGame);
 }
-
-
 
 function getGcd($firstNumber, $secondNumber)
 {
@@ -39,7 +30,5 @@ function getGcd($firstNumber, $secondNumber)
             $secondNumber = $secondNumber % $firstNumber;
         }
     }
-	return $firstNumber + $secondNumber;
+    return $firstNumber + $secondNumber;
 }
-
-
