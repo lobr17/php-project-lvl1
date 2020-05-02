@@ -8,3 +8,13 @@
 # Setting
 
 https://asciinema.org/a/djNWV8atovtdwREX8YGupPn4e
+
+
+Installation
+Via Composer
+
+$ composer require funct/funct
+
+<type>(<scope>): <subject>
+<BLANK LINE>
+<body>
