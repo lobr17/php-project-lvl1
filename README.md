@@ -13,6 +13,12 @@ https://asciinema.org/a/djNWV8atovtdwREX8YGupPn4e
 ## Installation
 Via Composer
 
-<pre>$ composer global require yason/brain-games.</pre>
+<pre>$ composer global require yason/brain-games:dev-master</pre>
+
+## Games
+
+### Игра: "Проверка на чётность"
+<pre>bin/brain-even</pre>
+
 
 
