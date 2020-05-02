@@ -18,7 +18,20 @@ Via Composer
 ## Games
 
 ### Игра: "Проверка на чётность"
-<pre>bin/brain-even</pre>
+<pre>$ brain-even</pre>
+
+### Игра: "Калькулятор"
+<pre>$ brain-calc</pre>
+
+### Игра "НОД"
+<pre>$ brain-gcd</pre>
+
+### Игра "Арифметическая прогрессия"
+<pre>$ brain-progression</pre>
+
+### Игра "Простое ли число?"
+<pre>$ brain-prime</pre>
+
 
 
 
