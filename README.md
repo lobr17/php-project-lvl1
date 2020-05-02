@@ -13,6 +13,6 @@ https://asciinema.org/a/djNWV8atovtdwREX8YGupPn4e
 ## Installation
 >Via Composer
 
-* $ composer require funct/funct *
+<pre> $ composer require funct/funct </pre>
 
 
