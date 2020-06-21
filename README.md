@@ -1,4 +1,4 @@
-Create folder .composer in /home/<name>/
+Create folder .composer in /home/$name/
 
 # php-project-lvl1
 
